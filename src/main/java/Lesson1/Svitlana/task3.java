@@ -9,6 +9,7 @@ public class task3 {
 //Input second number: 24
 //Expected Output :
 //125 + 24 = 149
+        //test
         Scanner scanner = new Scanner(System.in);
         int n1 = scanner.nextInt();
         int n2 = scanner.nextInt();
