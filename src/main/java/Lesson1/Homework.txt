@@ -22,7 +22,8 @@ Expected Output :
 13
 
 
-3.	Write a Java program to print the sum (addition), multiply, subtract, divide and remainder of two numbers. (Create a separate method for each operation)
+3.	Write a Java program to print the sum (addition), multiply, subtract, divide and remainder of two numbers.
+(Create a separate method for each operation)
 Test Data:
 Input first number: 125
 Input second number: 24
