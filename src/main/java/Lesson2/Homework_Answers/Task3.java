@@ -6,21 +6,18 @@ public class Task3 {
     }
 
     static class CelsiusConverter implements Converter {
-        @Override
         public double getConvertedValue(double baseValue) {
             return baseValue;
         }
     }
 
     static class KelvinConverter implements Converter {
-        @Override
         public double getConvertedValue(double baseValue) {
             return baseValue + 273.15;
         }
     }
 
     static class FahrenheitConverter implements Converter {
-        @Override
         public double getConvertedValue(double baseValue) {
             return 1.8 * baseValue + 32;
         }
