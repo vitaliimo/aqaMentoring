@@ -1,6 +1,6 @@
 package Lesson2;
 
-public class Poly {
+public class Lesson_2_2_polymorphism {
 
     public static void main(String[] args) {
         Tenis tenis = new Tenis();
