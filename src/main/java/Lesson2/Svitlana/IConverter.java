@@ -21,6 +21,7 @@ class CelsiiConverter implements IConverter {
         System.out.println("Please enter a degree of Celsii: ");
         int celsii = scanner.nextInt();
         newCelsiiConverter.convert(celsii);
+
     }
 }
 
