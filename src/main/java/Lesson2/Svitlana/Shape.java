@@ -3,7 +3,12 @@ package Lesson2.Svitlana;
 import java.util.Scanner;
 
 public class Shape {
-    public static double volume;
+    private static double volume;
+
+    public double getVolume() {
+
+        return volume;
+    }
 
     public static void main(String[] args) {
         Shape newShape = new Shape();
@@ -12,16 +17,19 @@ public class Shape {
         volume = scanner.nextDouble();
         System.out.println("Volume of the shape = " + newShape.getVolume());
     }
-
-    public double getVolume() {
-        return volume;
-    }
 }
+
 class SolidOfRevolution extends Shape {
     private static double radius;
 
-    public SolidOfRevolution(){
+    public SolidOfRevolution() {
+
         radius = 10;
+    }
+
+    public double getRadius() {
+
+        return radius;
     }
 
     public static void main(String[] args) {
@@ -31,11 +39,8 @@ class SolidOfRevolution extends Shape {
         radius = scanner.nextDouble();
         System.out.println("Volume of the Radius = " + newSolidOfRevolution.getRadius());
     }
-
-    public double getRadius() {
-        return radius;
-    }
 }
+
 class Pyramid extends Shape {
     private static double s;
     private static double h;
