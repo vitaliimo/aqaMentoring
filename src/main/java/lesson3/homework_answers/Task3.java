@@ -6,20 +6,33 @@ import java.util.HashSet;
 import java.util.Map;
 
 public class Task3 {
-    public static <K, V> Map<V, Collection<K>> replaceKeyWithValue(Map<? extends K, ? extends V> map) {
-        Map<V, Collection<K>> convertedMap = new HashMap<>();
-        for (K key : map.keySet()) {
-            V value = map.get(key);
-            if (convertedMap.containsKey(value)) {
-                Collection<K> listKeys = convertedMap.get(value);
-                listKeys.add(key);
-                convertedMap.put(value, listKeys);
-            } else {
-                Collection<K> listKeys = new HashSet<>();
-                listKeys.add(key);
-                convertedMap.put(value, listKeys);
+
+    public static <K, V> Map<V, Collection<K>> replaceKeyWithValue(Map<? extends K, ? extends V> inputMap) {
+        Map<V, Collection<K>> resultMap = new HashMap<>();
+
+        for (K key : inputMap.keySet()) {
+            V value = inputMap.get(key);
+            if (resultMap.containsKey(value)){
+                Collection<K> resultValue = resultMap.get(value);
+                resultValue.add(key);
+                resultMap.put(value, resultValue);
+            }
+            else {
+                Collection<K> resultValue = new HashSet<>();
+                resultValue.add(key);
+                resultMap.put(value, resultValue);
             }
         }
-        return convertedMap;
+
+        return resultMap;
+    }
+
+    public static void main(String[] args) {
+        HashMap<Integer, String> passportsAndNames = new HashMap<>();
+        passportsAndNames.put(100000, "Лидия");
+        passportsAndNames.put(111111, "Иван");
+        passportsAndNames.put(222222, "Иван");
+        passportsAndNames.put(823525, "Дональд");
+        System.out.println(replaceKeyWithValue(passportsAndNames));
     }
 }
