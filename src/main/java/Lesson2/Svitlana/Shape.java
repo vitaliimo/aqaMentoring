@@ -22,9 +22,9 @@ public class Shape {
 class SolidOfRevolution extends Shape {
     private static double radius;
 
-    public SolidOfRevolution() {
+    public SolidOfRevolution(double n) {
 
-        radius = 10;
+        radius = n;
     }
 
     public double getRadius() {
@@ -33,7 +33,7 @@ class SolidOfRevolution extends Shape {
     }
 
     public static void main(String[] args) {
-        SolidOfRevolution newSolidOfRevolution = new SolidOfRevolution();
+        SolidOfRevolution newSolidOfRevolution = new SolidOfRevolution(5);
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please input Radius");
         radius = scanner.nextDouble();
